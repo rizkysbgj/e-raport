@@ -51,9 +51,8 @@
 
               <ul class="nav">
                   <li class="active">
-                      <a href="/about">
-                          <i class="ti-panel"></i>
-                          <p>Dashboard</p>
+                      <a href="/home">
+                          <p>Home</p>
                       </a>
                   </li>
 
@@ -72,16 +71,14 @@
                   </li> -->
                   <li>
                       <a href={{"/nilai/kelas"}}>
-                          <i class="ti-text"></i>
-                          <p>Masukkan Nilai</p>
+                          <p>Masukkan Nilai Pelajaran</p>
                       </a>
                   </li>
-  								<!-- <li>
-                      <a href={{"/nasabah"}}>
-                          <i class="ti-text"></i>
-                          <p>List Nasabah</p>
+  								<li>
+                      <a href="">
+                          <p>Masukkan Nilai Sikap Siswa</p>
                       </a>
-                  </li> -->
+                  </li>
 
               </ul>
       	</div>

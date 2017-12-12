@@ -1,8 +1,19 @@
 <?php
 
-Route::get('/', function () {
-    return view('first'); //welcome.blade.php
-});
+// Route::get('/', function () {
+//     return view('first'); //welcome.blade.php
+// });
+
+Route::get('/', function(){
+       if (Auth::check())
+       {
+           return view('home');
+       }
+       else
+       {
+           return view('first');
+       }
+   });
 
 Route::get('master', function () {
     return view('/layouts/master'); //master template
@@ -31,8 +42,10 @@ Route::get('/home', 'HomeController@index');
 // Route::get('/nasabah/{id}', 'NasabahController@show');
 // Route::delete('/nasabah/{id}', 'DaftarController@delete');
 
-Route::get('/nilai/siswa', 'SiswaController@index');
+Route::get('/nilai/siswa', 'SiswaController@index')-> name('nilai.siswa');
 Route::get('/nilai/siswa/{kelas}', 'SiswaController@show');
 
 Route::get('/nilai/create/{id}', 'NilaiController@create')-> name('nilai.create');
 Route::post('/nilai/create/{id}', 'NilaiController@store')-> name('nilai.store');
+Route::get('/nilai/update/{nisn}', 'NilaiController@show')-> name('nilai.update');
+Route::post('/nilai/update/{nisn}', 'NilaiController@update')-> name('nilai.update');

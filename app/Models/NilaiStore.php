@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Nilai_Store extends Model
+class NilaiStore extends Model
 {
-    protected $fillable = ['nilai1', 'nisn'];
+    protected $guarded = [];
     public $timestamps = false;
     // protected $guarded = [];
 }
